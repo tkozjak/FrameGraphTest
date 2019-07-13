@@ -29,18 +29,12 @@ Entity {
 
     components: [
         RenderSettings{
-            //            activeFrameGraph: FrameGraph_01{
-            //                in_camera: perspective_camera
-            //            }
             activeFrameGraph: FrameGraph_02{
                 id: frame_graph_02
                 in_camera: perspective_camera
                 in_layer_render_surface: layer_render_surface
                 in_layer_render_target: layer_render_target
             }
-            //            activeFrameGraph: ForwardRendererGraph{
-            //                in_camera: perspective_camera
-            //            }
         },
         InputSettings{
 
@@ -82,6 +76,40 @@ Entity {
     }
 
     Material{
+        id: custom_rt_mat
+        parameters: []
+
+        effect: Effect{
+            parameters: []
+            techniques: [
+                Technique{
+//                    graphicsApiFilter: {
+//                        api: GraphicsApiFilter.OpenGL
+//                        profile: GraphicsApiFilter.CoreProfile
+//                        majorVersion: 4
+//                        minorVersion: 3
+//                    }
+
+                    parameters: []
+                    filterKeys: []
+
+                    renderPasses: [
+                        RenderPass{
+                            filterKeys: []
+                            renderStates: []
+                            parameters: []
+                            shaderProgram: ShaderProgram{
+                                vertexShaderCode: loadSource("qrc:/rt_vertex01.vert")
+                                fragmentShaderCode: loadSource("qrc:/rt_fragment01.frag")
+                            }
+                        } // render pass
+                    ]
+                } // technique
+            ]
+        } // effect
+    } // material
+
+    Material{
         id: custom_material
         parameters: []
 
@@ -89,12 +117,12 @@ Entity {
             parameters: []
             techniques: [
                 Technique{
-                    graphicsApiFilter{
-                        api: GraphicsApiFilter.OpenGL
-                        profile: GraphicsApiFilter.CoreProfile
-                        majorVersion: 4
-                        minorVersion: 3
-                    }
+//                    graphicsApiFilter{
+//                        api: GraphicsApiFilter.OpenGL
+//                        profile: GraphicsApiFilter.CoreProfile
+//                        majorVersion: 4
+//                        minorVersion: 3
+//                    }
 
                     parameters: []
                     filterKeys: []
@@ -122,7 +150,8 @@ Entity {
 //                                            source: "qrc:/stone.jpg"
 //                                        }
 //                                    }
-                                    value: frame_graph_02.out_render_target_texture
+//                                    value: frame_graph_02.out_render_target_texture
+                                    value: frame_graph_02.out_render_target_texture_01
                                 }
                             ]
                             shaderProgram: ShaderProgram{
@@ -144,7 +173,7 @@ Entity {
 
     Entity {
         id: torusEntity
-        components: [ torusMesh, material, torusTransform, layer_render_target ]
+        components: [ torusMesh, /*material*/custom_rt_mat, torusTransform, layer_render_target ]
     }
 
     Entity {

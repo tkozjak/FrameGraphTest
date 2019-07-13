@@ -9,5 +9,7 @@
         <file>fragment01.frag</file>
         <file>pink.png</file>
         <file>stone.jpg</file>
+        <file>rt_vertex01.vert</file>
+        <file>rt_fragment01.frag</file>
     </qresource>
 </RCC>
