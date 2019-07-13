@@ -9,5 +9,5 @@ void main(void)
 {
     vec4 texCol = texture2D(texture, vertexUV );
     colorOut = texCol;
-//    colorOut = vec4(1.0, 0.0, 0.0, 1.0);
+    colorOut = vec4(1.0, 0.0, 0.0, 1.0);
 }
