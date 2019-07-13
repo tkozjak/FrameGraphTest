@@ -36,8 +36,8 @@ Entity {
                             renderStates: []
                             parameters: []
                             shaderProgram: ShaderProgram{
-                                vertexShaderCode: loadSource("qrc:/rt_vertex01.vert")
-                                fragmentShaderCode: loadSource("qrc:/rt_fragment01.frag")
+                                vertexShaderCode: loadSource("qrc:/Shaders/rt_vertex01.vert")
+                                fragmentShaderCode: loadSource("qrc:/Shaders/rt_fragment01.frag")
                             }
                         } // render pass
                     ]

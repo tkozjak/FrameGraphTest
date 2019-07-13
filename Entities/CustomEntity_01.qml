@@ -4,6 +4,7 @@ import Qt3D.Extras 2.13
 
 import QtQuick 2.13 as QQ2
 
+
 Entity {
 
     property Layer in_render_layer
@@ -88,8 +89,8 @@ Entity {
                             renderStates: []
                             parameters: []
                             shaderProgram: ShaderProgram{
-                                vertexShaderCode: loadSource("qrc:/ent_vertex01.vert")
-                                fragmentShaderCode: loadSource("qrc:/ent_fragment01.frag")
+                                vertexShaderCode: loadSource("qrc:/Shaders/ent_vertex01.vert")
+                                fragmentShaderCode: loadSource("qrc:/Shaders/ent_fragment01.frag")
                             }
                         }
                     ]

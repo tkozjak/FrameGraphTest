@@ -47,7 +47,7 @@ Entity {
 //                                        maximumAnisotropy: 16.0
 //                                        TextureImage {
 //                                            id: texture_image
-//                                            source: "qrc:/stone.jpg"
+//                                            source: "qrc:/Textures/stone.jpg"
 //                                        }
 //                                    }
 //                                    value: frame_graph_02.out_render_target_texture
@@ -55,8 +55,8 @@ Entity {
                                 }
                             ]
                             shaderProgram: ShaderProgram{
-                                vertexShaderCode: loadSource("qrc:/vertex01.vert")
-                                fragmentShaderCode: loadSource("qrc:/fragment01.frag")
+                                vertexShaderCode: loadSource("qrc:/Shaders/vertex01.vert")
+                                fragmentShaderCode: loadSource("qrc:/Shaders/fragment01.frag")
                             }
                         }
                     ]
@@ -80,7 +80,7 @@ Entity {
 
     Entity {
         id: cubeEntity
-        components: [ cubeMesh, /*diffuse_specular_material*/custom_material, transform_01, in_render_layer ]
+        components: [ cubeMesh, custom_material, transform_01, in_render_layer ]
     }
 
 }

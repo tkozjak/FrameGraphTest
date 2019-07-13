@@ -2,19 +2,19 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>RenderScene3D.qml</file>
-        <file>FrameGraph_01.qml</file>
-        <file>ForwardRendererGraph.qml</file>
-        <file>FrameGraph_02.qml</file>
-        <file>vertex01.vert</file>
-        <file>fragment01.frag</file>
-        <file>pink.png</file>
-        <file>stone.jpg</file>
-        <file>rt_vertex01.vert</file>
-        <file>rt_fragment01.frag</file>
-        <file>Torus_01.qml</file>
-        <file>Cuboid_01.qml</file>
-        <file>CustomEntity_01.qml</file>
-        <file>ent_vertex01.vert</file>
-        <file>ent_fragment01.frag</file>
+        <file>Framegraphs/FrameGraph_01.qml</file>
+        <file>Framegraphs/ForwardRendererGraph.qml</file>
+        <file>Framegraphs/FrameGraph_02.qml</file>
+        <file>Shaders/vertex01.vert</file>
+        <file>Shaders/fragment01.frag</file>
+        <file>Textures/pink.png</file>
+        <file>Textures/stone.jpg</file>
+        <file>Shaders/rt_vertex01.vert</file>
+        <file>Shaders/rt_fragment01.frag</file>
+        <file>Entities/Torus_01.qml</file>
+        <file>Entities/Cuboid_01.qml</file>
+        <file>Entities/CustomEntity_01.qml</file>
+        <file>Shaders/ent_vertex01.vert</file>
+        <file>Shaders/ent_fragment01.frag</file>
     </qresource>
 </RCC>

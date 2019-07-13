@@ -5,6 +5,9 @@ import Qt3D.Extras 2.13
 
 import QtQuick 2.2 as QQ2
 
+import "Entities"
+import "Framegraphs"
+
 Entity {
 
     id: render_scene_root
