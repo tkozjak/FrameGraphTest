@@ -13,5 +13,8 @@
         <file>rt_fragment01.frag</file>
         <file>Torus_01.qml</file>
         <file>Cuboid_01.qml</file>
+        <file>CustomEntity_01.qml</file>
+        <file>ent_vertex01.vert</file>
+        <file>ent_fragment01.frag</file>
     </qresource>
 </RCC>

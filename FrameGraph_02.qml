@@ -86,7 +86,7 @@ Viewport{
 
                     ClearBuffers{
                         buffers: ClearBuffers.AllBuffers
-                        clearColor: "yellow"
+                        clearColor: "tan"
                     }
                 }
             }

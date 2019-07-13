@@ -3,6 +3,8 @@ import Qt3D.Render 2.13
 import Qt3D.Input 2.13
 import Qt3D.Extras 2.13
 
+import QtQuick 2.2 as QQ2
+
 Entity {
 
     id: render_scene_root
@@ -53,6 +55,14 @@ Entity {
 
     Cuboid_01{
         in_render_layer: layer_render_surface
+    }
+
+    CustomEntity_01{
+        in_render_layer: layer_render_surface
+    }
+
+    QQ2.Component.onCompleted: {
+        console.log( "3d scene completed" )
     }
 
 }

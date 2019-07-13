@@ -19,4 +19,8 @@ Window {
 
         RenderScene3D{}
     }
+
+    Component.onCompleted: {
+        console.log( "window created" )
+    }
 }
