@@ -1,13 +1,15 @@
 #version 430
 
 attribute vec3 vertexPosition;
-//attribute vec2 vertexTexCoord;
-uniform mat4 modelViewProjection;
+attribute vec3 vertexNormal;
 
-//varying vec2 vertexUV;
+uniform mat4 modelViewProjection;
+uniform mat4 modelMatrix;
+
+out vec4 vertexNormal_world;
 
 void main(void)
 {
     gl_Position = modelViewProjection * vec4( vertexPosition, 1.0 );
-//    vertexUV = vertexTexCoord;
+    vertexNormal_world = modelMatrix * vec4( vertexNormal, 0.0 );
 }

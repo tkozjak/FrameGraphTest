@@ -26,7 +26,7 @@ Viewport{
                     target: RenderTarget{
                         attachments: [
                             RenderTargetOutput{
-                                objectName: "render_target_object"
+                                objectName: "rt_color_00"
                                 attachmentPoint: RenderTargetOutput.Color0
                                 texture:Texture2D{
                                     id: color_attachment_texture_00
@@ -44,7 +44,7 @@ Viewport{
                             }
                             ,
                             RenderTargetOutput{
-                                objectName: "render_target_object"
+                                objectName: "rt_color_01"
                                 attachmentPoint: RenderTargetOutput.Color1
                                 texture:Texture2D{
                                     id: color_attachment_texture_01
@@ -60,27 +60,27 @@ Viewport{
                                     }
                                 }
                             }
-//                            ,
-//                            RenderTargetOutput
-//                            {
-//                                objectName: "depth"
-//                                attachmentPoint: RenderTargetOutput.Depth
-//                                texture:
-//                                    Texture2D{
-//                                    id: depthAttachment
-//                                    width: 512
-//                                    height: 512
-//                                    format: Texture.D32F
-//                                    generateMipMaps: false
-//                                    magnificationFilter: Texture.Linear
-//                                    minificationFilter: Texture.Linear
-//                                    wrapMode
-//                                    {
-//                                        x: WrapMode.ClampToEdge
-//                                        y: WrapMode.ClampToEdge
-//                                    }
-//                                }
-//                            }
+                            ,
+                            RenderTargetOutput
+                            {
+                                objectName: "depth"
+                                attachmentPoint: RenderTargetOutput.Depth
+                                texture:
+                                    Texture2D{
+                                    id: depthAttachment
+                                    width: 512
+                                    height: 512
+                                    format: Texture.D32F
+                                    generateMipMaps: false
+                                    magnificationFilter: Texture.Linear
+                                    minificationFilter: Texture.Linear
+                                    wrapMode
+                                    {
+                                        x: WrapMode.ClampToEdge
+                                        y: WrapMode.ClampToEdge
+                                    }
+                                }
+                            }
                         ]
                     }
 

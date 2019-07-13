@@ -19,10 +19,6 @@ Entity {
         viewCenter: Qt.vector3d( 0.0, 0.0, 0.0 )
     }
 
-    //    FirstPersonCameraController{
-    //        camera: perspective_camera
-    //    }
-
     OrbitCameraController{
         camera: perspective_camera
     }
@@ -51,134 +47,12 @@ Entity {
         recursive: true
     }
 
-    TorusMesh {
-        id: torusMesh
-        radius: 5
-        minorRadius: 1
-        rings: 100
-        slices: 20
+    Torus_01{
+        in_render_layer: layer_render_target
     }
 
-    CuboidMesh{
-        id: cubeMesh
-        xExtent: 10
-        yExtent: 10
-        zExtent: 10
-    }
-
-    PhongMaterial {
-        id: material
-    }
-
-    DiffuseSpecularMaterial{
-        id: diffuse_specular_material
-        ambient: Qt.rgba(1.0, 0.6, 0.0, 1.0)
-    }
-
-    Material{
-        id: custom_rt_mat
-        parameters: []
-
-        effect: Effect{
-            parameters: []
-            techniques: [
-                Technique{
-//                    graphicsApiFilter: {
-//                        api: GraphicsApiFilter.OpenGL
-//                        profile: GraphicsApiFilter.CoreProfile
-//                        majorVersion: 4
-//                        minorVersion: 3
-//                    }
-
-                    parameters: []
-                    filterKeys: []
-
-                    renderPasses: [
-                        RenderPass{
-                            filterKeys: []
-                            renderStates: []
-                            parameters: []
-                            shaderProgram: ShaderProgram{
-                                vertexShaderCode: loadSource("qrc:/rt_vertex01.vert")
-                                fragmentShaderCode: loadSource("qrc:/rt_fragment01.frag")
-                            }
-                        } // render pass
-                    ]
-                } // technique
-            ]
-        } // effect
-    } // material
-
-    Material{
-        id: custom_material
-        parameters: []
-
-        effect: Effect{
-            parameters: []
-            techniques: [
-                Technique{
-//                    graphicsApiFilter{
-//                        api: GraphicsApiFilter.OpenGL
-//                        profile: GraphicsApiFilter.CoreProfile
-//                        majorVersion: 4
-//                        minorVersion: 3
-//                    }
-
-                    parameters: []
-                    filterKeys: []
-
-                    renderPasses: [
-                        RenderPass{
-                            id: render_pass_01
-                            filterKeys: []
-                            renderStates: []
-                            parameters: [
-                                Parameter{
-                                    name: "texture"
-//                                    value:Texture2D {
-//                                        id: diffuse_texture
-//                                        minificationFilter: Texture.LinearMipMapLinear
-//                                        magnificationFilter: Texture.Linear
-//                                        wrapMode {
-//                                            x: WrapMode.Repeat
-//                                            y: WrapMode.Repeat
-//                                        }
-//                                        generateMipMaps: true
-//                                        maximumAnisotropy: 16.0
-//                                        TextureImage {
-//                                            id: texture_image
-//                                            source: "qrc:/stone.jpg"
-//                                        }
-//                                    }
-//                                    value: frame_graph_02.out_render_target_texture
-                                    value: frame_graph_02.out_render_target_texture_01
-                                }
-                            ]
-                            shaderProgram: ShaderProgram{
-                                vertexShaderCode: loadSource("qrc:/vertex01.vert")
-                                fragmentShaderCode: loadSource("qrc:/fragment01.frag")
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    }
-
-    Transform {
-        id: torusTransform
-        scale3D: Qt.vector3d(2.0, 2.0, 2.0)
-        rotation: fromAxisAndAngle(Qt.vector3d(1, 0, 0), 0)
-    }
-
-    Entity {
-        id: torusEntity
-        components: [ torusMesh, /*material*/custom_rt_mat, torusTransform, layer_render_target ]
-    }
-
-    Entity {
-        id: cubeEntity
-        components: [ cubeMesh, /*diffuse_specular_material*/custom_material, torusTransform, layer_render_surface ]
+    Cuboid_01{
+        in_render_layer: layer_render_surface
     }
 
 }

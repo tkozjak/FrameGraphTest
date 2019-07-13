@@ -11,5 +11,7 @@
         <file>stone.jpg</file>
         <file>rt_vertex01.vert</file>
         <file>rt_fragment01.frag</file>
+        <file>Torus_01.qml</file>
+        <file>Cuboid_01.qml</file>
     </qresource>
 </RCC>
