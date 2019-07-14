@@ -13,23 +13,28 @@ Entity {
         id: vertex_buffer
         type: Buffer.VertexBuffer
         data: {
-            var buffer = new Float32Array(4*3);
+            var buffer = new Float32Array(1000*3);
 
-            buffer[0] = 10.0;
-            buffer[1] = 0.0;
-            buffer[2] = 10.0;
+//            buffer[0] = 10.0;
+//            buffer[1] = 0.0;
+//            buffer[2] = 10.0;
 
-            buffer[3] = 10.0;
-            buffer[4] = 0.0;
-            buffer[5] = -10.0;
+//            buffer[3] = 10.0;
+//            buffer[4] = 0.0;
+//            buffer[5] = -10.0;
 
-            buffer[6] = -10.0;
-            buffer[7] = 0.0;
-            buffer[8] = -10.0;
+//            buffer[6] = -10.0;
+//            buffer[7] = 0.0;
+//            buffer[8] = -10.0;
 
-            buffer[9] = -10.0;
-            buffer[10] = 0.0;
-            buffer[11] = 10.0;
+//            buffer[9] = -10.0;
+//            buffer[10] = 0.0;
+//            buffer[11] = 10.0;
+
+            for( var i=0; i<1000*3; i++){
+                var x = (Math.random() * 21)-10;
+                buffer[i]=x;
+            }
 
             console.log( "buffer created" );
             return buffer;
@@ -54,7 +59,7 @@ Entity {
                 vertexSize: 3
                 byteOffset: 0
                 byteStride: 3*4
-                count: 4
+                count: 1000
                 name: "vertexxPosition"
                 buffer: vertex_buffer
             }
